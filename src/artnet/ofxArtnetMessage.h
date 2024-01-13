@@ -18,7 +18,7 @@ public:
 	void setData(const unsigned char* data, size_t size);
 	void setData(ofIndexType index, unsigned char data);
 	void setData(const ofPixels& pix);
-    void setData(std::vector<uint8_t> &data);
+  void setData(const std::vector<uint8_t> &data);
 
 	void readTo(unsigned char* data);
     void readTo(std::vector<uint8_t> &data);

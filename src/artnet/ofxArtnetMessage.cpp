@@ -68,7 +68,7 @@ void ofxArtnetMessage::setData(const ofPixels& pix)
 	setData(pix.getData(), datasize);
 }
 
-void ofxArtnetMessage::setData(std::vector<uint8_t> &data) {
+void ofxArtnetMessage::setData(const std::vector<uint8_t> &data) {
     _data = data;
 }
 
