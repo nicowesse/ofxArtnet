@@ -6,6 +6,7 @@ class ofxArtnetMessage
 public:
 	friend class ofxArtnetSender;
 	friend class ofxArtnetReceiver;
+  
 	ofxArtnetMessage();
 	ofxArtnetMessage(const ofPixels& pix);
 	~ofxArtnetMessage();
@@ -19,6 +20,8 @@ public:
 	void setData(ofIndexType index, unsigned char data);
 	void setData(const ofPixels& pix);
   void setData(const std::vector<uint8_t> &data);
+  
+  const std::vector<uint8_t> & getData() const { return _data; }
 
 	void readTo(unsigned char* data);
     void readTo(std::vector<uint8_t> &data);
@@ -36,6 +39,7 @@ public:
 	inline unsigned int getNet() const { return _net; }
 	inline unsigned int getSize() const { return _data.size(); }
 	ofxArtnetMessage& operator = (const ofxArtnetMessage& obj);
+  
 private:
 	inline void setPortAddress(unsigned int portAddress)
 	{
